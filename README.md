@@ -60,4 +60,4 @@ The best-performing model is saved using the `pickle` library for later deployme
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/ManasPl/car_price_pred.git
+   git clone https://github.com/ManasPl/car_price_prediction.git
