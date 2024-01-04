@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            New
+        </title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    </head>
+    <body>
+        <main>
+            <div class="main">
+                <div class="first">
+                    <form method="GET" action="{{ url_for('predict')}}">
+                        <h1>Car data</h1>
+                        <div class="infirst">
+                            <div class="Ifirst">
+                                <label>Car Width</label>
+                                <input name="carwidth" placeholder="in meters" type="number">
+                            </div>
+                            <div class="Ifirst">
+                                <label>Curb Weight</label>
+                                <input name="curbweight" placeholder="in cc" type="number">
+                            </div> 
+                            <div class="Ifirst">
+                                <label>Engine Size</label>
+                                <input name="enginesize" placeholder="in bhp">
+                            </div> 
+                        </div>
+                        <div class="insecond">
+                            <div class="Ifirst">
+                                <label>Car Length</label>
+                                <input name="carlength" placeholder="in bhp">
+                            </div>
+                            <div class="Ifirst">
+                                <label>Horse Power</label>
+                                <input name="horsepower" placeholder="Write here">
+                            </div>
+                            <div class="Ifirst">
+                                <label>Cylinder Number</label>
+                                <select name="cylindernumber">
+                                    <option value="" disabled selected>Select</option>
+                                    <option value="1">eight</option>
+                                    <option value="2">four</option>
+                                    <option value="3">Not Stated</option>
+                                </select>
+                            </div>   
+                        </div>
+                            <div class="inthird">                              
+                                <div class="Ifirst">
+                                    <label>Citympg</label>
+                                    <input name="citympg" placeholder="Write here">                                    
+                                </div>
+                                <div class="Ifirst">
+                                    <label>Engine Type</label>
+                                    <select name="enginetype">
+                                        <option value="" disabled selected>Select</option>
+                                        <option value="1">ohc</option>
+                                        <option value="2">ohcv</option>
+                                        <option value="3">Not Stated</option>
+                                    </select>
+                                </div>
+                                <div class="Ifirst">
+                                    <label>Car Body</label>
+                                    <select name="carbody">
+                                        <option value="" disabled selected>Select</option>
+                                        <option value="1">convertible</option>
+                                        <option value="2">hatchback</option>
+                                        <option value="3">wagon</option>
+                                        <option value="4">Not Stated</option>
+                                    </select>
+                                </div>  
+                            </div>
+                            <div class="infourth">                               
+                                <div class="Ifirst">
+                                    <label>Engine Location</label>
+                                    <select name="enginelocation">
+                                        <option value="" disabled selected>Select</option>
+                                        <option value="1">front</option>
+                                        <option value="2">rear</option>
+                                    </select>
+                                </div>
+                                    <div class="Ifirst">
+                                        <label>Drive Wheel</label>
+                                        <select name="drivewheel">
+                                            <option value="" disabled selected>Select</option>
+                                            <option value="1">fwd</option>
+                                            <option value="2">rwd</option>
+                                            <option value="3">4wd</option>
+                                        </select>
+                                     </div>                                    
+                                </div>
+                            <div class="insixth">
+                                
+                                                                 
+                    </div> 
+                        <div class="inlast">
+                            <div class="submit">
+                                <button>Submit</button>
+                            </div> 
+                            <div>
+                                <p>{{prediction_text}}</p>
+                            </div>
+                        </div>
+                    </form>    
+                </div>
+            </div>
+        </main>
+    </body>
+</html>
